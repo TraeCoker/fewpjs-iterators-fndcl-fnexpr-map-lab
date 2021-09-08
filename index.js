@@ -13,5 +13,9 @@ const tutorials = [
 
 const titleCased = () => {
   // use the .map method on the tutorials to return a new array
-  return tutorials
+  const titlizedTutorials = tutorials.map(title => 
+    title.split(' ')
+    .map(word => word[0].toUpperCase() + word.substr(1))
+    .join(' '))
+  return titlizedTutorials
 }
